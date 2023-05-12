@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  body {
+    background-color: #FFFFFF; /* Couleur de fond blanche */
+    color: #444444; /* Couleur du texte */
+  }
+  
+  header {
+    background-color: #1D1F21; /* Couleur de fond du header */
+    color: #FFFFFF; /* Couleur du texte du header */
+    padding: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  nav li {
+    margin: 0 20px;
+  }
+  
+  nav a {
+    color: #FFFFFF; /* Couleur des liens du header */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s;
+  }
+  
+  nav a:hover {
+    color: #FF8C00; /* Couleur des liens du header au survol */
+  }
+  
+  nav a:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #FF8C00; /* Couleur de la barre de séparation */
+    transition: width 0.2s;
+  }
+  
+  nav a:hover:before {
+    width: 100%;
+  }
+  
+  main section {
+    padding: 40px;
+    background-color: #F2F2F2; /* Couleur de fond des sections */
+    border-bottom: 1px solid #CCCCCC; /* Bordure du bas */
+    color: #444444; /* Couleur du texte des sections */
+  }
+  
+  main section:first-child {
+    border-top: 1px solid #CCCCCC; /* Bordure du haut de la première section */
+  }
+  
+  main section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2F4F4F; /* Couleur des titres */
+  }
+  
+  main section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  main section a {
+    color: #FF8C00; /* Couleur des liens dans les sections */
+    text-decoration: none;
+  }
+  
+  main section a:hover {
+    text-decoration: underline;
+  }
+  
+  main section img {
+    max-width: 100%;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #FF8C00; /* Couleur de fond des boutons */
+    color: #FFFFFF; /* Couleur du texte des boutons */
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #FFA500; /* Couleur de fond des boutons au survol */
+  }
+  footer {
+    background-color: #1D1F21; /* Couleur de fond du footer */
+    color: #FFFFFF; /* Couleur du texte du footer */
+    padding: 20px;
+    margin-top: 50px; /* Espace entre la dernière section et le footer */
+  }
+  
+  footer p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  footer li {
+    margin: 0 10px;
+  }
+  
+  footer a {
+    color: #FFFFFF; /* Couleur des liens du footer */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s;
+  }
+  
+  footer a:hover {
+    color: #FF8C00; /* Couleur des liens du footer au survol */
+  }
+  
+  footer a:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #FF8C00; /* Couleur de la barre de séparation */
+    transition: width 0.2s;
+  }
+  
+  footer a:hover:before {
+    width: 100%;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.2s;
+  }
+  
+  .social-media a:hover {
+    transform: scale(1.2); /* Effet de zoom au survol */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  /* Style pour les écrans plus petits */
+@media only screen and (max-width: 768px) {
+    /* Réduire la taille de la police pour le texte principal */
+    h1 {
+      font-size: 28px;
+    }
+    #video{
+      width: 300px;
+  
+  
+    }
+  
+    /* Centrer les liens du header */
+    header nav {
+      justify-content: center;
+    }
+  
+    /* Cacher les sections par défaut */
+    main section {
+      display: none;
+    }
+  
+    /* Afficher la section active */
+    main section.active {
+      display: block;
+    }
+  
+    /* Réduire la taille de la police pour les sous-titres */
+    main section h2 {
+      font-size: 24px;
+    }
+  
+    /* Réduire la taille de la police pour le texte secondaire */
+    main section p {
+      font-size: 16px;
+    }
+  
+    /* Centrer les boutons */
+    main section button {
+      margin: 20px auto;
+    }
+    
+    /* Mettre les images en 100% de la largeur */
+    main section img {
+      width: 100%;
+    }
+    
+    /* Ajuster la taille du logo dans le footer */
+    footer img {
+      width: 100px;
+    }
+    
+    /* Centrer les éléments du footer */
+    footer {
+      text-align: center;
+    }
+    
+    /* Ajuster la taille des icônes de réseaux sociaux dans le footer */
+    .social-media a {
+      font-size: 24px;
+    }
+  }
+
+  #divmoi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+  #btnScrollToTop {
+    display: none; /* le bouton est masqué par défaut */
+    position: fixed; /* le bouton reste en haut de l'écran même si on fait défiler la page */
+    bottom: 20px; /* distance entre le bouton et le bas de l'écran */
+    right: 20px; /* distance entre le bouton et la droite de l'écran */
+    z-index: 1; /* pour placer le bouton au-dessus des autres éléments */
+  }
+  
+  #btnScrollToTop.show {
+    display: block; /* afficher le bouton lorsqu'il est nécessaire */
+  }
+  #btnScrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    background-color: #a3a3a3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #btnScrollToTop:hover {
+    background-color: #222;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  #btnScrollToTop.show {
+    display: block;
+  }
+  #video{
+    width: 800px;
+
+
+  }
+  #divmoi2{
+    margin-left: 10px;
+  }

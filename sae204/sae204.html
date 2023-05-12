@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SAE204</title>
+    <link rel="stylesheet" href="sae204style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>SAE 204</h1>
+        <nav>
+          <ul>
+            <li><a href="#etudes">Qui suis-je ?</a></li>
+            <li><a href="#projet">Projet Professionnel</a></li>
+            <li><a href="#presence">Présence Numérique</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+      <button id="btnScrollToTop">Remonter la page</button>
+      <br>
+      <br>
+      <center><h1>Etienne SAUTIVET</h1></center>
+        <br>
+        <br>
+        <div id="divmoi">
+          <div>
+      <img src="photomoi.JPG" alt="photomoi" width="350px">
+    </div>
+      <div id="divmoi2">
+      <h1>19 ans</h1>
+      <h1>Troyes</h1>
+      <h1>Développeur Web</h1>
+    </div>
+    </div>
+      <br>
+      <br>
+
+        <section id="etudes" class="hiddn">
+            <h2>Qui suis-je ?</h2>
+            <p>Je suis un étudiant en MMI à Troyes, passionné par les sneakers, la formule 1 et le développement web. Je m'épanouis beaucoup dans ma formation grâce à mon intérêt pour le développement et ma soif d'apprendre. Je suis curieux, sérieux et rigoureux dans mon travail, ce qui me permet d'atteindre mes objectifs avec efficacité. J'aime constamment améliorer mes compétences et découvrir de nouvelles opportunités dans le domaine du développement web et des nouvelles technologies.</p>
+        </section>
+        <section id="projet" class="hidden">
+            <h2>Projet Professionnel</h2>
+            <p>Je penses avoir encore beaucoup d’intérêt pour les études et je me vois donc bien continuer d’étudier après le BUT. J’aimerai faire un Master. Je n’ai pas d’idée précise mais je penses continuer dans le développement Web et la gestion de projet. Je souhaites intégrer le BUT 2 en alternance. En effet l’alternance est pour moi essentiel , le développement n’est pas théorique et il faut pratiquer pour pouvoir progresser. Je ne vises aucune société en particulier , je veux étudier toutes les offres et ne pas me limiter à un seul type d’entreprise pour mon alternance. </p>
+        </section>
+        <section id="presence" class="hidden">
+            <h2>Présence Numérique</h2>
+            <p>Vous pouvez retrouvé mon Portfolio <a href="http://mmi22f11.mmi-troyes.fr/portfolio">ici</a>.</p>
+            <p>Vous pouvez retrouvé mon profil Github <a href="https://github.com/etiennes0904">ici</a>.</p>
+            <p>Vous pouvez retrouvé mon profil Linkedin <a href="https://www.linkedin.com/in/etienne-sautivet-9442a2269/">ici</a>.</p>
+        </section>
+        <br>
+        <br>
+        <center><video id="video" src="video.mp4" controls></video></center>
+        <br>
+        <br>
+    </main>
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('main section');
+  
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            // Masquer toutes les sections
+            sections.forEach(section => section.classList.add('hidden'));
+            // Afficher la section correspondante
+            const targetId = link.getAttribute('href').slice(1);
+            const targetSection = document.getElementById(targetId);
+            targetSection.classList.remove('hidden');
+          });
+        });
+      </script>
+      <script>
+        // Afficher le bouton lorsque l'utilisateur fait défiler la page
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btnScrollToTop").classList.add("show");
+  } else {
+    document.getElementById("btnScrollToTop").classList.remove("show");
+  }
+}
+
+// Remonter en haut lorsque l'utilisateur clique sur le bouton
+document.getElementById("btnScrollToTop").addEventListener("click", function() {
+  document.body.scrollTop = 0; // Pour les navigateurs Safari
+  document.documentElement.scrollTop = 0; // Pour les autres navigateurs
+});
+
+      </script>
+    <footer>
+
+        
+
+    </footer>
+</body>
+</html>
